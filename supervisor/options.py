@@ -952,6 +952,7 @@ class ServerOptions(Options):
             pconfig = klass(
                 self,
                 name=expand(process_name, expansions, 'process_name'),
+                process_num=process_num,
                 command=command,
                 directory=directory,
                 umask=umask,

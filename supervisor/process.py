@@ -313,6 +313,8 @@ class Subprocess(object):
             if serverurl:
                 env['SUPERVISOR_SERVER_URL'] = serverurl
             env['SUPERVISOR_PROCESS_NAME'] = self.config.name
+            if self.config.process_num is not None:
+                env['SUPERVISOR_PROCESS_NUM'] = self.config.process_num
             if self.group:
                 env['SUPERVISOR_GROUP_NAME'] = self.group.config.name
             if self.config.environment is not None:
